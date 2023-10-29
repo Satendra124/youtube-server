@@ -19,7 +19,7 @@ channelRouter.get('/', authMiddleware, async (req, res) => {
     }
 });
 
-channelRouter.get('/subscribe/:id', authMiddleware, async (req, res) => {
+channelRouter.post('/subscribe/:id', authMiddleware, async (req, res) => {
     try {
         const id = req.params.id;
         const user = await Channel.findById(req.user._id);

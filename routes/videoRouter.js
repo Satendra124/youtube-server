@@ -98,5 +98,4 @@ videoRouter.post('/:id/comment', authMiddleware, async (req, res) => {
     }
 })
 
-
 export default videoRouter;
